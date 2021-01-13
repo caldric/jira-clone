@@ -33,6 +33,17 @@ describe('Email address text input', () => {
   test('Has the "email" input type', () => {
     expect(emailInput.prop('type')).toBe('email');
   });
+
+  test('User is able to type an email into the input box', () => {
+    // Create sample email
+    const email: string = 'user@email.com';
+
+    // Simulate user typing an email
+    emailInput.simulate('change', { target: { value: email } });
+
+    // Input text value should be equal to the email
+    expect(emailInput.prop('value')).toBe(email);
+  });
 });
 
 describe('Password text input', () => {
