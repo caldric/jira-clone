@@ -20,7 +20,10 @@ test('Displays text to sign up for new account', () => {
 });
 
 describe('Email address text input', () => {
-  test('Renders without errors', () => {});
+  test('Renders without errors', () => {
+    const emailInput = wrapper.find('#email-input');
+    expect(emailInput.length).toBe(1);
+  });
 });
 
 describe('Password text input', () => {
