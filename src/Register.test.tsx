@@ -20,9 +20,18 @@ test('Displays text to sign up for new account', () => {
 });
 
 describe('Email address text input', () => {
+  let emailInput: ShallowWrapper;
+
+  beforeEach(() => {
+    emailInput = wrapper.find('#email');
+  });
+
   test('Renders without errors', () => {
-    const emailInput = wrapper.find('#email-input');
     expect(emailInput.length).toBe(1);
+  });
+
+  test('Has the "email" input type', () => {
+    expect(emailInput.prop('type')).toBe('email');
   });
 });
 

@@ -6,7 +6,7 @@ const Register = () => {
   return (
     <div id="Register">
       <h1 id="signup-header">Sign up for a new account</h1>
-      <input type="text" id="email-input" placeholder="Email address" />
+      <input type="email" id="email" name="email" placeholder="Email address" />
     </div>
   );
 };
