@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const Register: React.FC = () => {
   const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
 
   return (
     <div id="Register">
@@ -20,8 +21,8 @@ const Register: React.FC = () => {
           id="password"
           name="password"
           placeholder="Enter password"
-          // value={password}
-          // onChange={(event) => setEmail(event.target.value)}
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
         />
       </form>
     </div>
