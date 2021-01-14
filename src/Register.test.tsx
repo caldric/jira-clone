@@ -51,6 +51,11 @@ describe('User registration form', () => {
       const passwordInput = wrapper.find('#password');
       expect(passwordInput).toHaveLength(1);
     });
+
+    test('Has the "password" input type', () => {
+      const passwordInput = wrapper.find('#password');
+      expect(passwordInput.prop('type')).toBe('password');
+    });
   });
 
   describe('Sign up button', () => {
