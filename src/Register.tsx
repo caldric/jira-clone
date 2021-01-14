@@ -6,14 +6,24 @@ const Register: React.FC = () => {
   return (
     <div id="Register">
       <h1 id="signup-header">Sign up for a new account</h1>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Email address"
-        value={email}
-        onChange={(event) => setEmail(event.target.value)}
-      />
+      <form>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email address"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+        />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter password"
+          // value={password}
+          // onChange={(event) => setEmail(event.target.value)}
+        />
+      </form>
     </div>
   );
 };
