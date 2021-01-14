@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Register = () => {
+const Register: React.FC = () => {
   const [email, setEmail] = useState<string>('');
 
   return (

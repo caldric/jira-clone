@@ -34,7 +34,7 @@ describe('Email address text input', () => {
     expect(emailInput.prop('type')).toBe('email');
   });
 
-  test('User is able to type an email into the input box', () => {
+  test('User is able to type an email in the input', () => {
     // Create sample email
     const email: string = 'user@email.com';
 
@@ -42,7 +42,8 @@ describe('Email address text input', () => {
     emailInput.simulate('change', { target: { value: email } });
 
     // Input text value should be equal to the email
-    expect(emailInput.prop('value')).toBe(email);
+    const inputText = wrapper.find('#email').prop('value');
+    expect(inputText).toBe(email);
   });
 });
 
