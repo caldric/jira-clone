@@ -47,13 +47,17 @@ describe('User registration form', () => {
   });
 
   describe('Password text input', () => {
+    let passwordInput: ShallowWrapper;
+
+    beforeEach(() => {
+      passwordInput = wrapper.find('#password');
+    });
+
     test('Renders without errors', () => {
-      const passwordInput = wrapper.find('#password');
       expect(passwordInput).toHaveLength(1);
     });
 
     test('Has the "password" input type', () => {
-      const passwordInput = wrapper.find('#password');
       expect(passwordInput.prop('type')).toBe('password');
     });
   });
