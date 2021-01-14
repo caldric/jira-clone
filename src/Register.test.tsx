@@ -60,6 +60,18 @@ describe('User registration form', () => {
     test('Has the "password" input type', () => {
       expect(passwordInput.prop('type')).toBe('password');
     });
+
+    test('User is able to type a password in the input', () => {
+      // Create sample password
+      const password: string = 'SamplePassword';
+
+      // Simulate user typing an password
+      passwordInput.simulate('change', { target: { value: password } });
+
+      // Input text value should be equal to the password
+      const inputText = wrapper.find('#password').prop('value');
+      expect(inputText).toBe(password);
+    });
   });
 
   describe('Sign up button', () => {
